@@ -1,0 +1,51 @@
+* {
+	margin:0px;
+	padding:0px;
+}
+
+html {
+	margin:0px;
+	padding:0px;
+}
+
+body {
+	background-color:#FFFFFF;
+}
+
+img {
+    border-bottom: 1px solid #AAAAAA;
+
+}
+
+#centerbox{
+    text-align:center;
+}
+
+#login_box {
+    border: 1px solid #AAAAAA;
+    margin:auto;
+    width:300px;
+    margin-top:100px;
+    text-align:left;
+}
+
+#loginfield {
+    margin-left: 10px;
+    margin-right:10px;
+    padding:5px;
+    border:none;
+}
+
+p {
+    display:inline;
+}
+
+.button {
+    margin:5px;
+    margin-top:0px;
+    width:50px;
+}
+
+.center {
+    text-align:center;
+}
