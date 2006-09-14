@@ -35,9 +35,11 @@
        include_once(GC_IPATH.'templates/'.$_POST['Template'].'/config.php');
        $TPLBlocks = explode(';',$TemplateSettings);
        
+       include_once(GC_IPATH.'functions.php');
+       include(GC_IPATH.'_base/site-index.php');
        //filename
        $filename = extractName($_POST['path']);
-       $filehandle = fopen(GC_IPATH."_base/sites/".$filename.'.php', "w");
+       $filehandle = fopen(GC_IPATH."_base/sites/".dec2hex($SLastID + 1).'-'.$filename.'.php', "w");
        //write header
        fwrite($filehandle, "<?php \r\n");
        fwrite($filehandle, '$SSettings = array();'."\r\n");

@@ -1,7 +1,16 @@
 <?php
+    /*************************************/
+	/*	Project: libSession
+	/*	Author: darkdragon
+	/*	Licensed: GPLv2, see license.txt on top level directory
+	/* 
+	/*      File: libSession.php
+	/*	Description: a class for session handling
+	/*************************************/
+
 
 class Session {
-	
+
 	// Session Start and Destroy
 	function start()
 	{

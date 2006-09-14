@@ -1,7 +1,9 @@
 <?php 
 $SIndex = array();
-$SIndex['/News'] = 'news.php'; 
-$SIndex['/Projekte/Projekt1'] = 'projekt1.php'; 
-$SIndex['/Projekte/'] = 'projekte.php'; 
-$SIndex['/test'] = 'test.php'; 
+$SIndex['/News'] = '0000-news.php'; 
+$SIndex['/Projekte/Projekt1'] = '0001-projekt1.php'; 
+$SIndex['/Projekte/'] = '0002-projekte.php'; 
+$SIndex['/test'] = '0003-test.php'; 
+$SIndex['/test2'] = '0004-test2.php'; 
+$SLastID = 4; 
 ?>

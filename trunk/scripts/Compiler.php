@@ -32,7 +32,7 @@
 		while ($file = readdir ($dirlist))
 		{
 			$newpath = $dir.'/'.$file;
-			if ($file != '.' && $file != '..')
+			if ($file != '.' && $file != '..' && $file != '.svn')
 			{
 				if (is_dir($newpath))
 				{
@@ -94,6 +94,7 @@
     {
 
         $filehandle = fopen(GC_IPATH."_base/site-index.php", "w");
+        $maxid = 0;
         fwrite($filehandle, "<?php \r\n");
         fwrite($filehandle, '$SIndex = array();'."\r\n");
         
@@ -101,14 +102,17 @@
         $dirlist = opendir($path);
 		while ($file = readdir ($dirlist))
 		{
-            if ($file != '.' && $file != '..')
+            if ($file != '.' && $file != '..' && $file != '.svn')
 			{
                 include($path.'/'.$file);
+                $value = hexdec(substr($file,0,4));
+                if($value > $maxid) $maxid=$value;
                 fwrite($filehandle, '$SIndex'."['" . $SSettings['path'] . "'] = '" . $file . "'; \r\n");
             }
         }
         closedir($dirlist);
         //finish sites
+        fwrite($filehandle, '$SLastID'." = " . $maxid . "; \r\n");
         fwrite($filehandle, "?>");
         fclose($filehandle );
     }

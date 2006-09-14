@@ -16,20 +16,18 @@
     
     //get 
 	$param = $_GET['p'];
-	if(empty($param)) $param = 'news';
+	if(empty($param)) $param = '/News';
 	//get right page 
 	//$page = $param.'.php';
 	
     //static or dynamic
     if(GC_FULLSTATIC)
     {
-        $page = $param.'.htm';
-        staticpage($page);
+        staticpage($param);
     }
     else
     {
-        $page = GC_IPATH.'_base/sites/'.$param.'.php';
-        dynamicpage($page); 
+        dynamicpage($param); 
     }
 
 ?>
