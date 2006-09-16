@@ -14,8 +14,13 @@ body {
 
 /* ------------------------------- */
 #header {
-	border-bottom:1px solid #cccaca;
-	height:75px;
+	border-bottom: 2px solid #eb7d00;
+	height:100px;
+    background: #f1f1f1 url(images/heading.png) repeat-x;
+}
+
+#header img {
+    padding-top:7px;
 }
 
 /* ------------------------------- */
@@ -23,7 +28,7 @@ body {
 	float:left;
 	width:150px;
 	padding-bottom:0.5em;
-	border:1px solid #aaaaaa;
+	border:1px solid #0d236a;
 	margin-left: 5px;
 	margin-top: 10px;
     
@@ -41,7 +46,7 @@ body {
 }
 
 #sidebar_left h1 {
- background-color: #e0e0e0;
+ background-color: #aab4d5;
  color: #444444;
  font-family: verdana, arial, sans-serif;
  font-size: x-small;
@@ -54,7 +59,7 @@ body {
 
 /* ------------------------------- */
 #content {
-	border:1px solid #aaaaaa;
+	border:1px solid #0d236a;
 	margin-left:180px;
 	margin-right:10px;
 	margin-top:10px;
@@ -68,7 +73,7 @@ body {
 	font-size: x-small;
 	font-weight:bold;
 	line-height: 200%;
-	background-color: #e0e0e0;
+	background-color: #aab4d5;
 }
 
 #content h2 {

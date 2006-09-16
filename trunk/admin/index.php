@@ -9,15 +9,15 @@
 	/*************************************/
     
 	//TODO Change Constant
-    if (!defined('GC_IPATH')) exit;   
-    //Constants for Admin interface
-    define('GC_ADMIN',GC_IPATH.'admin/');
+    if (!defined('PC_ISADMIN')) exit;   
     
-    //admin backend
-    include_once(GC_IPATH.'lib/ltemplate.inc');
-    include_once(GC_IPATH.'lib/libSession.inc');
-	include_once(GC_ADMIN.'page-alias.php');
-    include_once(GC_ADMIN.'admin-functions.php');
+    //global includes
+    include_once(GC_PLIB.'ltemplate.inc');
+    include_once(GC_PLIB.'libSession.inc');
+    include_once(GC_IPATH.'functions.php');
+    //admin includes
+	include_once(GC_PADMIN.'page-alias.php');
+    include_once(GC_PADMIN.'admin-functions.php');
     
     ////////////////////////////
     //Objects

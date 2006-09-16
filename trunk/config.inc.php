@@ -3,7 +3,8 @@
 	//	    P    mean Path
 	
 	//////////////////////////////////////////////////////////////////////
-	//GLOBAL:
+	// GLOBAL
+    // PATH SETTINGS
 	//////////////////////////////////////////////////////////////////////
 	define('GC_PATHSIGN', '/' );
 	//webpath
@@ -14,9 +15,12 @@
 	//templates
 	define('GC_PTPL',GC_IPATH.'templates/');
 	//libs
+    define('GC_PLIB',GC_IPATH.'lib/');
 	//scripts
+    define('GC_PSCRIPT',GC_IPATH.'scripts/');
 	//admin
-	
+    define('GC_PADMIN',GC_IPATH.'admin/');
+
 	//////////////////////////////////////////////////////////////////////
 	// Page Settings:
 	//////////////////////////////////////////////////////////////////////
@@ -29,8 +33,12 @@
 	//$ConfPages['http://localhost/bla'] = /var/www/bla/;
 	
     //define datapathes:
-	define('GC_P_DATAIN', $ConfPages[GC_WEBPATH].'_base/');
-	define('GC_P_DATAOUT', $ConfPages[GC_WEBPATH].'_compiled/');
+	define('GC_PBASE', $ConfPages[GC_WEBPATH].'_base/');
+	define('GC_POUT', $ConfPages[GC_WEBPATH].'_compiled/');
+    
+    /////////////////////////////////////////////////////////////////////////////
+    //key files
+    define('GC_SINDEX',GC_PBASE.'site-index.php');
 	
 	//OPTIONAL: main_path 
 	

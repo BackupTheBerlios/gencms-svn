@@ -14,7 +14,7 @@
         $Session->start();
         
         //check for user and password
-        if($_POST['user'] == 'test' && $_POST['password'] == 'test')
+        if($_POST['user'] == 'test' && sha1($_POST['password']) == 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3')
             $Session->register('UserID',$_POST['user']);
         
         //check session is ok
@@ -32,7 +32,7 @@
         $dirlist = opendir($dir);
 		while ($file = readdir ($dirlist))
 		{
-            if ($file == '.' || $file == '..')
+            if ($file == '.' || $file == '..' || $file == '.svn')
                 continue;
             
 			$newpath = $dir.'/'.$file;
@@ -43,14 +43,5 @@
         }
         return $list;
     }
-    
-    function extractName($string)
-    {
-         if(substr($string,-1) == "/")
-            $tmpname = substr($string,0,-1);
-        else
-            $tmpname = $string;
-            
-        return substr($tmpname,strrpos($tmpname,'/')+1);
-    }
+   
 ?>

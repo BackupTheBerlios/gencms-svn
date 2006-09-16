@@ -8,7 +8,7 @@
 <body>
 
 	<div id="header">
-		<img src="<?=GC_WEBPATH.'admin/'?>images/GenCMS.png" alt="Logo" />
+		<img src="<?=GC_WEBPATH.'admin/'?>images/gencms_wordart.png" alt="Logo" />
 	</div>
 
 	<div id="sidebar_left">
