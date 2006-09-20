@@ -67,7 +67,7 @@
 <?php if ($Step == "1"): ?>  
     <p>Choose Template:</p>
     <br/>
-    <form action="admin.php?p=SiteNew&step=2" method="post">
+    <form action="admin.php?p=NewSite&step=2" method="post">
         <p>Template:<br/>
             <select name="Template" class="combobox">
                 <?php foreach ($Block['Templates'] as $TplEntry): ?>  
@@ -78,7 +78,7 @@
         </p>
     </form>
 <?php elseif ($Step == "2"): ?>
-    <form action="admin.php?p=SiteNew&step=3" method="post">
+    <form action="admin.php?p=NewSite&step=3" method="post">
 		<!-- Setting Block ($SSettings) -->
 		<fieldset style="width:350px;" >
             <legend>Settings</legend>
