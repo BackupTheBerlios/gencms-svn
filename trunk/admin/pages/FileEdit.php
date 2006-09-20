@@ -1,8 +1,8 @@
 <?php
-	//p = editfile
 	//s = site
 	//b = block
-	
+	include_once();
+    $filecontent = $SBlocks[];
 	//get file from site file
 	// if post has name from textfield save
 ?>

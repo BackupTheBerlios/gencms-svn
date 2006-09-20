@@ -5,10 +5,14 @@
 	/*	Licensed: GPLv2 or newer, see license.txt on top level directory
 	/* 
 	/*      File: functions.php
-	/*	Description:
+	/*	Description: base functions for gencms
 	/*************************************/
     
     //TODO: make it more stable
+    
+    //== CONSTANT
+    define('ERR_SITE',1000); // A SITE ERROR
+    
     //================================================================================================
     //Functions =======================================================================================
     
@@ -103,5 +107,34 @@
             
         return substr($tmpname,strrpos($tmpname,'/')+1);
     }
+    
+    ////////////////////////////////////////////////
+    // Error Handler
+    function ErrorHandler($errno, $errstr, $errfile, $errline)
+    {
+        $TPL = new LTemplate();
+        
+        switch ($errno) 
+        {
+        case E_ERROR:
+            $TPL->set('ERRORTYPE','ERROR');
+            break;
+        case E_WARNING:
+            $TPL->set('ERRORTYPE','WARNING');
+            break;
+        case E_PARSE:
+            $TPL->set('ERRORTYPE','PARSING ERROR');
+            break;
+        default:
+            return;
+        }
 
+        $TPL->set('ERRORSTR',$errstr);
+        $TPL->set('ERRORFILE',$errfile);
+        $TPL->set('ERRORLINE',$errline);
+        
+        $TPL->render(GC_PDEFTPL.'error.tpl');
+        exit;
+    }
+    
 ?>

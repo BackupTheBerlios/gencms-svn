@@ -15,6 +15,9 @@
     //include site index
     include_once(GC_SINDEX);
     
+    //define Error Handler
+    set_error_handler("ErrorHandler");
+    
     //get page from p 
 	$param = $_GET['p'];
 	if(empty($param)) {   
@@ -23,7 +26,7 @@
     }
 
     //static or dynamic
-    if(GC_FULLSTATIC)
+    if(GC_STATICSITES)
     {
         staticpage($param);
     }

@@ -1,0 +1,32 @@
+html {
+    text-align:center;
+} 
+
+body {
+    text-align:center;
+} 
+
+table {
+    border-spacing:0px;
+}
+
+td {
+    border: 1px solid #000000;
+    
+}
+
+.center {
+    margin: 0 auto;
+    width: 60%;
+}
+
+.errtypecell {
+    height: 70px;
+    background-color: #7b68ee;
+}
+
+.headingcell {
+    background-color:#e0ffff;
+}
+
+

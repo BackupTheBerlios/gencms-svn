@@ -20,6 +20,8 @@
     define('GC_PSCRIPT',GC_IPATH.'scripts/');
 	//admin
     define('GC_PADMIN',GC_IPATH.'admin/');
+    //default templates (error template etc)
+    define('GC_PDEFTPL',GC_PTPL.'_default/');
 
 	//////////////////////////////////////////////////////////////////////
 	// Page Settings:
@@ -50,5 +52,5 @@
     define('GC_CTBLOCK','content');
     
     //full static ?
-    define('GC_FULLSTATIC',false);
+    define('GC_STATICSITES',false);
 ?>
