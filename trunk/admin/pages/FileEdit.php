@@ -9,19 +9,19 @@
         $FileParam = $_GET['name'];
     
         $File = GC_PBASE.'blocks/'.$BlockParam.'/'.$FileParam.'.php';
-        $FileContent = file_get_contents($File);
+        $FileContent = stripslashes(file_get_contents($File));
     }
     
     //save
     if(!empty($_POST['FileContent']))
     {
-        $BlockName = $_POST['BlockName'];
-        $FileName = $_POST['FileName'];
+        $BlockParam = $_POST['BlockName'];
+        $FileParam  = $_POST['FileName'];
         $FileContent = $_POST['FileContent'];
         
-        $SaveFile = GC_PBASE.'blocks/'.$BlockName.'/'.$FileName.'.php';
+        $SaveFile = GC_PBASE.'blocks/'.$BlockParam.'/'.$FileParam.'.php';
         $filehandle = fopen($SaveFile,'w');
-        fwrite($filehandle,$FileContent);
+        fwrite($filehandle,stripslashes($FileContent));
         fclose($filehandle);
     }
     
